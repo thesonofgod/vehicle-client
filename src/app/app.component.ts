@@ -21,7 +21,7 @@ export class AppComponent {
 
   
   searchVin(){
-    this.http.get('http://localhost:8080/api/vehicle/'+this.vinNumber)
+    this.http.get('http://34.229.176.163:8080/api/vehicle/'+this.vinNumber)
     .subscribe(
          (res:Response) => {
           const vehicleRetrieved = res.json();
@@ -34,7 +34,7 @@ export class AppComponent {
   }
 
   randomVin() {
-    this.http.get('http://localhost:8080/api/vehicle')
+    this.http.get('http://34.229.176.163:8080/api/vehicle/')
     .subscribe(
     (res:Response) => {
       this.randVinNumber = res.json();
